@@ -1,0 +1,71 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "coin watch",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "PriceIntent",
+                    "slots": [],
+                    "samples": [
+                        "what's the price of my coin",
+                        "what is the value of my coin",
+                        "how much does doge coin cost today",
+                        "how much does doge coin cost right now",
+                        "what does doge cost right now",
+                        "what does doge cost today",
+                        "how is doge coin doing",
+                        "how is doge coin",
+                        "how is doge",
+                        "what's the price",
+                        "what is the cost",
+                        "what is the value of doge coin",
+                        "what is the value of doge",
+                        "what is the value",
+                        "what is the price of doge coin",
+                        "what is the price of doge",
+                        "what is the price"
+                    ]
+                },
+                {
+                    "name": "StatusIntent",
+                    "slots": [],
+                    "samples": [
+                        "is the equipment okay",
+                        "is the hardware all right",
+                        "what is the status of coin watch",
+                        "what is the status of the apparatus",
+                        "what is the status of the hardware",
+                        "Is the hardware working",
+                        "Is the hardware okay",
+                        "Is the apparatus working",
+                        "Is the appartus okay",
+                        "Is coin watch active",
+                        "Is the device okay",
+                        "Is the device working"
+                        ]
+                }
+            ],
+            "types": []
+        }
+    }
+}
