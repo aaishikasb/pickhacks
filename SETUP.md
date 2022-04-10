@@ -48,6 +48,8 @@
   pip install twilio
   pip install pyserial
   pip install RPi.GPIO
+  pip install jinja2==2.9.6
+  pip install werkzeug==0.12.1
   wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip
   unzip ngrok-stable-linux-arm.zip
   ```
