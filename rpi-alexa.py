@@ -92,11 +92,11 @@ if __name__ == '__main__':
     app.run(debug=True)
 
 response_API = requests.get('https://sochain.com//api/v2/get_price/DOGE/USD')
-# print(response_API.status_code)
+print(response_API.status_code)
 data = response_API.text
 parse_json = json.loads(data)
-doge_price = parse_json['data']['prices']['price']
-# print("Doge is trading at ", doge_price)
+doge_price = parse_json['data']['prices'][0]['price']
+print("Doge is trading at ", doge_price)
 
 GPIO.add_event_detect(18, GPIO.FALLING, callback = twilMsg, bouncetime = 2000)
 
