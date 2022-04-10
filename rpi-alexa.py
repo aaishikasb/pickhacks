@@ -42,6 +42,16 @@ def twilMsg(channel):
     time.sleep(2)
     GPIO.output(23, GPIO.LOW)
 
+# API Fetch
+response_API = requests.get('https://sochain.com//api/v2/get_price/DOGE/USD')
+print(response_API.status_code)
+data = response_API.text
+parse_json = json.loads(data)
+doge_price = parse_json['data']['prices'][0]['price']
+print("Doge is trading at ", doge_price)
+
+GPIO.add_event_detect(18, GPIO.FALLING, callback = twilMsg, bouncetime = 2000)
+
 @ask.launch
 def launch():
     speech_text = 'Welcome to Coin Watch.'
@@ -90,15 +100,6 @@ if __name__ == '__main__':
         if verify == 'false':
             app.config['ASK_VERIFY_REQUESTS'] = False
     app.run(debug=True)
-
-response_API = requests.get('https://sochain.com//api/v2/get_price/DOGE/USD')
-print(response_API.status_code)
-data = response_API.text
-parse_json = json.loads(data)
-doge_price = parse_json['data']['prices'][0]['price']
-print("Doge is trading at ", doge_price)
-
-GPIO.add_event_detect(18, GPIO.FALLING, callback = twilMsg, bouncetime = 2000)
 
 while 1:  
    time.sleep(1)
